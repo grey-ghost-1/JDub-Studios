@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Network Diagnostic Utility | Justin Wimmer</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="site-shell">
+<main class="detail-shell">
+  <nav class="detail-nav" aria-label="Site navigation"><a class="home-link" href="../it_support.html">← Back to IT Support</a></nav>
+  <header class="detail-header">
+    <p class="eyebrow">IT Support Prototype</p>
+    <h1>Network Diagnostic Utility</h1>
+    <p class="detail-focus">A bounded command-line diagnostic that resolves one host through DNS and invokes the operating system's ping command once.</p>
+  </header>
+  <section class="detail-card">
+    <h2>Evidence snapshot</h2>
+    <p><strong>Source:</strong> <code>IT Support\network-diagnostic-utility</code></p>
+    <p><strong>Run from repository root:</strong> <code>python "IT Support\network-diagnostic-utility\main.py" localhost</code></p>
+    <p><strong>Validation:</strong> Spawns a bounded system ping process and performs DNS/ICMP activity; the default target remains local.</p>
+  </section>
+  <section class="detail-card"><h2>Implemented</h2><ul><li>IPv4 resolution with <code>socket.gethostbyname</code></li><li>OS-aware ping flag selection</li><li>Eight-second subprocess timeout and reachability result</li></ul></section>
+  <section class="detail-card"><h2>Limitations</h2><p>No traceroute, parsed latency value, repeated monitoring, packet-loss analysis, DNS-record inspection, configuration diagnosis, or remediation is implemented.</p></section>
+</main>
+</body>
+</html>

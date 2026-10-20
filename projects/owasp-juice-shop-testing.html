@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Response Reflection Check | Justin Wimmer</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="site-shell">
+<main class="detail-shell">
+  <nav class="detail-nav" aria-label="Site navigation"><a class="home-link" href="../cybersecurity.html">← Back to Cyber Security</a></nav>
+  <header class="detail-header">
+    <p class="eyebrow">Cyber Security Training Prototype</p>
+    <h1>OWASP Juice Shop Testing</h1>
+    <p class="detail-focus">A local string-reflection check for illustrating one input-handling concept without contacting Juice Shop or another web application.</p>
+  </header>
+  <section class="detail-card">
+    <h2>Evidence snapshot</h2>
+    <p><strong>Source:</strong> <code>Cybersecurity\owasp-juice-shop-testing</code></p>
+    <p><strong>Run from repository root:</strong> <code>python "Cybersecurity\owasp-juice-shop-testing\main.py"</code></p>
+    <p><strong>Validation:</strong> Fully local and deterministic; performs no file, network, browser, or target interaction.</p>
+  </section>
+  <section class="detail-card">
+    <h2>Implemented</h2>
+    <ul>
+      <li>Accepts probe and response strings through command-line options</li>
+      <li>Checks whether the probe appears unescaped in the response</li>
+      <li>Prints a small structured training result</li>
+    </ul>
+  </section>
+  <section class="detail-card">
+    <h2>Limitations</h2>
+    <p>This does not test OWASP Juice Shop, run exploits, cover the OWASP Top 10, or assess authentication, access control, injection, or browser behavior.</p>
+  </section>
+</main>
+</body>
+</html>

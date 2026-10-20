@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Messaging/RCS Simulator | Justin Wimmer</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="site-shell">
+<main class="detail-shell">
+  <nav class="detail-nav" aria-label="Site navigation"><a class="home-link" href="../it_support.html">← Back to IT Support</a></nav>
+  <header class="detail-header">
+    <p class="eyebrow">IT Support Simulation</p>
+    <h1>Messaging/RCS Diagnostic Simulator</h1>
+    <p class="detail-focus">A deterministic local if/else simulation that shows an RCS delivery result or an SMS fallback result.</p>
+  </header>
+  <section class="detail-card">
+    <h2>Evidence snapshot</h2>
+    <p><strong>Source:</strong> <code>IT Support\messaging-rcs-diagnostic-simulator</code></p>
+    <p><strong>Run from repository root:</strong> <code>python "IT Support\messaging-rcs-diagnostic-simulator\main.py" hello --rcs-unavailable</code></p>
+    <p><strong>Validation:</strong> Fully local and deterministic; no message, carrier, device, or network interaction occurs.</p>
+  </section>
+  <section class="detail-card"><h2>Implemented</h2><ul><li>Message text input</li><li>Boolean RCS-availability flag</li><li>Canned channel, delivery state, and latency output</li></ul></section>
+  <section class="detail-card"><h2>Limitations</h2><p>This does not implement RCS or SMS protocols, carrier routing, delivery verification, device testing, randomized failures, or real latency measurement.</p></section>
+</main>
+</body>
+</html>

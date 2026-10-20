@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Network Telemetry Summary | Justin Wimmer</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="site-shell">
+<main class="detail-shell">
+  <nav class="detail-nav" aria-label="Site navigation"><a class="home-link" href="../network_software.html">← Back to Network Software</a></nav>
+  <header class="detail-header">
+    <p class="eyebrow">Network Simulation</p>
+    <h1>Network Monitoring Dashboard</h1>
+    <p class="detail-focus">A static telemetry-summary prototype that classifies two built-in device records and prints aggregate JSON.</p>
+  </header>
+  <section class="detail-card">
+    <h2>Evidence snapshot</h2>
+    <p><strong>Source:</strong> <code>Network\network-monitoring-dashboard</code></p>
+    <p><strong>Run from repository root:</strong> <code>python "Network\network-monitoring-dashboard\main.py"</code></p>
+    <p><strong>Validation:</strong> Fully local and deterministic; uses only built-in sample data and writes nothing.</p>
+  </section>
+  <section class="detail-card"><h2>Implemented</h2><ul><li><code>DeviceStatus</code> dataclass</li><li>Healthy and alert classification for two sample devices</li><li>JSON summary counts</li></ul></section>
+  <section class="detail-card"><h2>Limitations</h2><p>There is no SNMP dependency, live polling, dashboard server, visualization, historical storage, alert delivery, device connection, or real-time data.</p></section>
+</main>
+</body>
+</html>

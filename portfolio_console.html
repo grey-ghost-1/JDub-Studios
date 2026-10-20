@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Justin Wimmer's full-stack and backend engineering portfolio, featuring tested software projects and Z, a local-first personal AI operating system for Windows.">
+<title>Full-Stack &amp; Backend Developer | Justin Wimmer</title>
+<link rel="stylesheet" href="style.css?v=professional-preview">
+</head>
+<body class="portfolio-home">
+<a class="skip-link" href="#about">Skip to About</a>
+<main class="page-shell" id="top">
+  <header class="site-header">
+    <div class="header-content">
+      <div>
+        <p class="eyebrow">Software engineering portfolio</p>
+        <h1>Justin Wimmer</h1>
+        <p class="tagline">Full-Stack &amp; Backend Developer · Roanoke, VA · Open to remote roles.</p>
+      </div>
+      <nav class="primary-nav" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#featured-projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#labs">Labs</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  <section class="hero-section" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <p class="eyebrow">Full-stack and backend engineering</p>
+      <h2 id="hero-title">I build secure, tested software from API to browser.</h2>
+      <p>My work combines typed Python services, relational data modeling, authentication and tenant isolation, lightweight JavaScript interfaces, deterministic computation, and automated evidence.</p>
+      <div class="proof-list" aria-label="Portfolio evidence">
+        <span><strong>4</strong> featured projects</span>
+        <span><strong>5</strong> automated test suites</span>
+        <span><strong>19</strong> labs and prototypes</span>
+      </div>
+      <div class="action-row">
+        <a class="button-link primary-link" href="#featured-projects">Explore featured projects</a>
+        <a class="button-link secondary-link" href="project-evidence.json">View evidence inventory</a>
+      </div>
+    </div>
+    <aside class="assistant-card" aria-label="Deterministic portfolio Q and A">
+      <div class="assistant-heading">
+        <h2>Portfolio Q&amp;A</h2>
+        <p id="redesignConsoleStatus" role="status">Deterministic helper ready.</p>
+      </div>
+      <div id="z-chatbox">
+        <div id="z-chat-log" aria-live="polite"></div>
+        <label class="sr-only" for="z-chat-input">Ask a question about the portfolio</label>
+        <div class="question-row">
+          <input id="z-chat-input" type="text" placeholder="Ask about projects, skills, or evidence">
+          <button id="startVoiceInput" type="button" aria-label="Start voice input">Voice</button>
+          <button id="z-chat-send" type="button">Ask</button>
+        </div>
+      </div>
+      <p class="helper-disclosure">Predefined portfolio responses only. No model, account access, or action execution.</p>
+    </aside>
+  </section>
+  </header>
+
+  <section id="about" class="content-section" aria-labelledby="about-title">
+    <div class="section-heading">
+      <p class="eyebrow">About</p>
+      <h2 id="about-title">Practical engineering, grounded in evidence</h2>
+    </div>
+    <div class="about-grid">
+      <p>I am a self-taught full-stack and backend developer pursuing software roles. My service-oriented background shaped my focus on security, reliability, and clear documentation.</p>
+      <div class="about-facts">
+        <p><strong>U.S. Navy veteran</strong><br>Hospital Corpsman, 2022–2024</p>
+        <p><strong>Education</strong><br>B.A. International Relations, University of Lynchburg, 2020</p>
+        <p><strong>Certificates</strong><br>Google IT Support · Google Cybersecurity · IBM AI Engineering · IBM Data Analytics</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="featured-projects" class="content-section" aria-labelledby="projects-title">
+    <div class="section-heading">
+      <p class="eyebrow">Featured Projects</p>
+      <h2 id="projects-title">Four engineering case studies</h2>
+      <p>Each project includes source, architecture decisions, exact run commands, limitations, and executable tests.</p>
+    </div>
+    <div class="project-grid">
+      <article class="project-card">
+        <p class="card-label">01 · Local AI operating system</p>
+        <h3>Z: Local AI Assistant</h3>
+        <p>A local-first personal AI operating system for Windows, with a FastAPI backend, React + Vite + Tailwind dashboard, SQLite storage, and optional local LLMs through Ollama. Its dashboard brings together Chat, Life OS, Calendar + Workflow, Reports, Entry Log, System, Settings, and Notes. Actions require an exact preview and explicit approval.</p>
+        <ul><li>Life OS includes a daily planner based on C.O.O.L. and a Projects map</li><li>System includes PC health and maintenance</li><li>Real actions remain approval-gated</li></ul>
+        <div class="card-links">
+          <a href="z-showcase.html">Controlled showcase</a>
+          <a href="projects/z-ai-assistant.html">Z project evidence</a>
+        </div>
+      </article>
+      <article class="project-card">
+        <p class="card-label">02 · Full-stack platform</p>
+        <h3>Operations Platform</h3>
+        <p>Tenant-isolated operational assets and workflows with FastAPI, SQLAlchemy, Alembic, role checks, immutable audits, and a functional operator UI.</p>
+        <ul><li>Auth, RBAC, workspace isolation, CRUD, workflows</li><li>PostgreSQL production configuration; SQLite tests</li><li>Health, readiness, structured logs, OpenAPI</li></ul>
+        <div class="card-links">
+          <a href="projects/operations-platform.html">Platform evidence</a>
+          <a data-public-source-path="platform" href="https://github.com/grey-ghost-1/JDub-Studios/tree/main/platform">View source on GitHub</a>
+          <a class="optional-site-link" data-demo-link="platform" hidden>Hosted demo</a>
+        </div>
+      </article>
+      <article class="project-card">
+        <p class="card-label">03 · Data and simulation</p>
+        <h3>Orbital Data Lab</h3>
+        <p>A bounded two-body simulation API comparing RK4 and velocity-Verlet, with deterministic storage, lineage, exports, and browser visualization.</p>
+        <ul><li>Numerical correctness and energy-drift tests</li><li>Content-addressed, idempotent SQLite scenarios</li><li>Validated API inputs and JSON/CSV export</li></ul>
+        <div class="card-links">
+          <a href="projects/orbital-data-lab.html">Orbital evidence</a>
+          <a data-public-source-path="orbital-data-lab" href="https://github.com/grey-ghost-1/JDub-Studios/tree/main/orbital-data-lab">View source on GitHub</a>
+          <a class="optional-site-link" data-demo-link="orbital" hidden>Hosted demo</a>
+        </div>
+      </article>
+      <article class="project-card">
+        <p class="card-label">04 · Algorithms and quality</p>
+        <h3>Algorithms &amp; Quality</h3>
+        <p>Original Python data structures and algorithm strategies backed by deterministic edge-case tests and explicit complexity trade-offs.</p>
+        <ul><li>Arrays, maps, trees, graphs, queues</li><li>Sorting, search, backtracking, dynamic programming</li><li>Empty, duplicate, invalid, ordering, and mutation cases</li></ul>
+        <div class="card-links">
+          <a href="projects/algorithm-quality-lab.html">Algorithms evidence</a>
+          <a data-public-source-path="algorithms-quality" href="https://github.com/grey-ghost-1/JDub-Studios/tree/main/algorithms-quality">View source on GitHub</a>
+        </div>
+      </article>
+    </div>
+    <div class="evidence-note">
+      <div>
+        <h3>Runnable evidence across every layer</h3>
+        <p>Automated checks cover Flask routes and links, platform APIs and migrations, Orbital calculations and storage, Z safety and isolation, and algorithm edge cases.</p>
+      </div>
+      <a href="project-evidence.json">Open evidence inventory</a>
+    </div>
+  </section>
+
+  <section id="skills" class="content-section" aria-labelledby="skills-title">
+    <div class="section-heading">
+      <p class="eyebrow">Skills</p>
+      <h2 id="skills-title">Tools used in the featured work</h2>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-group"><h3>Backend and AI</h3><p>Python · FastAPI · Flask · Pydantic · SQLAlchemy · Alembic · local LLMs via Ollama</p></div>
+      <div class="skill-group"><h3>Data</h3><p>PostgreSQL · SQLite · relational modeling · migrations</p></div>
+      <div class="skill-group"><h3>Frontend</h3><p>JavaScript · React · Tailwind · HTML · CSS · responsive interfaces</p></div>
+      <div class="skill-group"><h3>Quality and delivery</h3><p>Pytest · Ruff · Docker · GitHub Actions</p></div>
+    </div>
+  </section>
+
+  <section id="labs" class="content-section labs-section" aria-labelledby="labs-title">
+    <div>
+      <p class="eyebrow">Labs &amp; Prototypes</p>
+      <h2 id="labs-title">A practical learning archive</h2>
+      <p>Nineteen smaller exercises span software, security, IT support, and networking. They are intentionally secondary to the four featured case studies.</p>
+    </div>
+    <a class="button-link secondary-link" href="labs.html">Browse all 19 labs</a>
+  </section>
+
+  <section id="contact" class="content-section contact-section" aria-labelledby="contact-title">
+    <div>
+      <p class="eyebrow">Contact</p>
+      <h2 id="contact-title">Let’s talk about the work</h2>
+      <p>For role inquiries, use the contact link below. A resume link appears when a resume is configured.</p>
+      <div id="optional-application-links" class="contact-links" aria-label="Configured contact and resume links"></div>
+    </div>
+    <a class="button-link primary-link" data-public-source-path="" href="https://github.com/grey-ghost-1/JDub-Studios/tree/main">View source on GitHub</a>
+  </section>
+</main>
+<footer class="site-footer">© 2026 Justin Wimmer · JDub Studios</footer>
+
+<script src="app.js?v=5"></script>
+</body>
+</html>

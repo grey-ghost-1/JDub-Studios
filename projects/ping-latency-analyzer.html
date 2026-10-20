@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ping Reachability Analyzer | Justin Wimmer</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="site-shell">
+<main class="detail-shell">
+  <nav class="detail-nav" aria-label="Site navigation"><a class="home-link" href="../network_software.html">← Back to Network Software</a></nav>
+  <header class="detail-header">
+    <p class="eyebrow">Network Diagnostic Prototype</p>
+    <h1>Ping &amp; Latency Analyzer</h1>
+    <p class="detail-focus">A sequential wrapper around the operating system's ping command that records reachability and raw command output for supplied hosts.</p>
+  </header>
+  <section class="detail-card">
+    <h2>Evidence snapshot</h2>
+    <p><strong>Source:</strong> <code>Network\ping-latency-analyzer</code></p>
+    <p><strong>Run from repository root:</strong> <code>python "Network\ping-latency-analyzer\main.py" 127.0.0.1</code></p>
+    <p><strong>Validation:</strong> Spawns bounded system ping processes and sends ICMP traffic; the documented target is loopback.</p>
+  </section>
+  <section class="detail-card"><h2>Implemented</h2><ul><li>One bounded two-packet ping per supplied host</li><li>OS-aware ping flag selection</li><li>Reachability boolean and raw stdout output</li></ul></section>
+  <section class="detail-card"><h2>Limitations</h2><p>Checks are sequential, not multithreaded or continuous. Packet-loss percentages and latency statistics are not parsed, stored, graphed, or alerted on.</p></section>
+</main>
+</body>
+</html>

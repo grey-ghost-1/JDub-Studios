@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Device Health Classifier | Justin Wimmer</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="site-shell">
+<main class="detail-shell">
+  <nav class="detail-nav" aria-label="Site navigation"><a class="home-link" href="../it_support.html">← Back to IT Support</a></nav>
+  <header class="detail-header">
+    <p class="eyebrow">IT Support Prototype</p>
+    <h1>Device Troubleshooting Toolkit</h1>
+    <p class="detail-focus">A command-line health classifier that evaluates three user-supplied utilization percentages against fixed thresholds.</p>
+  </header>
+  <section class="detail-card">
+    <h2>Evidence snapshot</h2>
+    <p><strong>Source:</strong> <code>IT Support\device-troubleshooting-toolkit</code></p>
+    <p><strong>Run from repository root:</strong> <code>python "IT Support\device-troubleshooting-toolkit\main.py" --cpu 32 --memory 71 --disk 94</code></p>
+    <p><strong>Validation:</strong> Fully local and deterministic; uses supplied values and makes no system changes.</p>
+  </section>
+  <section class="detail-card"><h2>Implemented</h2><ul><li>CPU, memory, and disk percentage inputs</li><li>Threshold-based healthy or attention state</li><li>Structured issue list in JSON output</li></ul></section>
+  <section class="detail-card"><h2>Limitations</h2><p>This is a CLI calculation, not a GUI or live diagnostic scanner. It does not inspect drivers, network connectivity, processes, hardware, or operating-system state.</p></section>
+</main>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Network Scanner Prototype | Justin Wimmer</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="site-shell">
+<main class="detail-shell">
+  <nav class="detail-nav" aria-label="Site navigation">
+    <a class="home-link" href="../cybersecurity.html">← Back to Cyber Security</a>
+  </nav>
+  <header class="detail-header">
+    <p class="eyebrow">Cyber Security Prototype</p>
+    <h1>Network Scanner</h1>
+    <p class="detail-focus">A dependency-free command-line prototype that performs sequential TCP connection checks against one explicitly supplied host and port list.</p>
+  </header>
+  <section class="detail-card">
+    <h2>Evidence snapshot</h2>
+    <p><strong>Source:</strong> <code>Cybersecurity\network-scanner</code></p>
+    <p><strong>Run from repository root:</strong> <code>python "Cybersecurity\network-scanner\main.py" 127.0.0.1 --ports 22,80,443</code></p>
+    <p><strong>Validation:</strong> Safe against the loopback target; sends bounded TCP connection attempts and writes no files.</p>
+  </section>
+  <section class="detail-card">
+    <h2>Implemented</h2>
+    <ul>
+      <li>Comma-separated port parsing</li>
+      <li>Sequential <code>socket.connect_ex</code> checks with a 0.3-second timeout</li>
+      <li>JSON output containing the host and detected open ports</li>
+    </ul>
+  </section>
+  <section class="detail-card">
+    <h2>Limitations</h2>
+    <p>This is not multithreaded, does not expand CIDR ranges, and does not identify services or banners. Use only against systems you own or are authorized to test.</p>
+  </section>
+</main>
+</body>
+</html>

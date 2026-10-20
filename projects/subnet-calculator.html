@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subnet Calculator | Justin Wimmer</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="site-shell">
+<main class="detail-shell">
+  <nav class="detail-nav" aria-label="Site navigation"><a class="home-link" href="../network_software.html">← Back to Network Software</a></nav>
+  <header class="detail-header">
+    <p class="eyebrow">Network Utility</p>
+    <h1>Subnet Calculator</h1>
+    <p class="detail-focus">A dependency-free command-line utility that reports network boundaries and usable host information for IPv4 or IPv6 CIDR input.</p>
+  </header>
+  <section class="detail-card">
+    <h2>Evidence snapshot</h2>
+    <p><strong>Source:</strong> <code>Network\subnet-calculator</code></p>
+    <p><strong>Run from repository root:</strong> <code>python "Network\subnet-calculator\main.py" 192.168.1.0/24</code></p>
+    <p><strong>Validation:</strong> Fully local, deterministic, and side-effect free.</p>
+  </section>
+  <section class="detail-card"><h2>Implemented</h2><ul><li>Standard-library <code>ipaddress</code> parsing</li><li>Network, broadcast, and netmask output</li><li>Address count, usable-host count, and first/last host output</li></ul></section>
+  <section class="detail-card"><h2>Limitations</h2><p>This is a calculator only. It does not discover networks, reserve addresses, modify configurations, persist plans, or connect to infrastructure.</p></section>
+</main>
+</body>
+</html>

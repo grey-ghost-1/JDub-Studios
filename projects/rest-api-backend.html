@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Item Record Prototype | Justin Wimmer</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="site-shell">
+<main class="detail-shell">
+  <nav class="detail-nav" aria-label="Site navigation"><a class="home-link" href="../software_development.html">← Back to Software &amp; Automation</a></nav>
+  <header class="detail-header">
+    <p class="eyebrow">Software Validation Prototype</p>
+    <h1>REST API Backend</h1>
+    <p class="detail-focus">Despite the retained project path and title, the current implementation is one dependency-free item-validation function and command-line wrapper, not an HTTP API.</p>
+  </header>
+  <section class="detail-card">
+    <h2>Evidence snapshot</h2>
+    <p><strong>Source:</strong> <code>Software Automation\rest-api-backend</code></p>
+    <p><strong>Run from repository root:</strong> <code>python "Software Automation\rest-api-backend\main.py" widget --quantity 4</code></p>
+    <p><strong>Validation:</strong> Fully local, in-memory, deterministic, and side-effect free.</p>
+  </section>
+  <section class="detail-card"><h2>Implemented</h2><ul><li>Non-empty item-name validation</li><li>Non-negative quantity validation</li><li>Owner-scoped dictionary construction and JSON output</li></ul></section>
+  <section class="detail-card"><h2>Limitations</h2><p>No FastAPI, Flask route, HTTP server, REST interface, JWT, authentication, database, persistence, service layer, schema library, or read/update/delete operations are implemented.</p></section>
+</main>
+</body>
+</html>

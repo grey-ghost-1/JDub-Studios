@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Device Configuration Plan Utility | Justin Wimmer</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="site-shell">
+<main class="detail-shell">
+  <nav class="detail-nav" aria-label="Site navigation"><a class="home-link" href="../network_software.html">← Back to Network Software</a></nav>
+  <header class="detail-header">
+    <p class="eyebrow">Network Plan-Only Prototype</p>
+    <h1>Automated Device Configuration Utility</h1>
+    <p class="detail-focus">A review-only planner that combines local device records with supplied configuration commands and prints a proposed plan.</p>
+  </header>
+  <section class="detail-card">
+    <h2>Evidence snapshot</h2>
+    <p><strong>Source:</strong> <code>Network\automated-device-configuration-utility</code></p>
+    <p><strong>Run from repository root:</strong> <code>python "Network\automated-device-configuration-utility\main.py" path\to\targets.json --command "vlan 20"</code></p>
+    <p><strong>Validation:</strong> Read-only and requires user-supplied target JSON plus at least one command.</p>
+  </section>
+  <section class="detail-card"><h2>Implemented</h2><ul><li>Local JSON target loading</li><li>Repeated command arguments</li><li>Explicit <code>plan-only</code> output per device</li></ul></section>
+  <section class="detail-card"><h2>Limitations</h2><p>No SSH, Netmiko, credential handling, device connection, configuration push, validation command, backup, rollback, or log file is implemented.</p></section>
+</main>
+</body>
+</html>

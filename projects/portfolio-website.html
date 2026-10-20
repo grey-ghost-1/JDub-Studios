@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Website Inventory | Justin Wimmer</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="site-shell">
+<main class="detail-shell">
+  <nav class="detail-nav" aria-label="Site navigation"><a class="home-link" href="../software_development.html">← Back to Software &amp; Automation</a></nav>
+  <header class="detail-header">
+    <p class="eyebrow">Software Utility</p>
+    <h1>Portfolio Website</h1>
+    <p class="detail-focus">The repository root contains the actual Flask-served portfolio. This paired project script is a smaller verification utility that inventories HTML files in a supplied directory.</p>
+  </header>
+  <section class="detail-card">
+    <h2>Evidence snapshot</h2>
+    <p><strong>Source:</strong> <code>Software Automation\portfolio-website</code></p>
+    <p><strong>Run from repository root:</strong> <code>python "Software Automation\portfolio-website\main.py" .</code></p>
+    <p><strong>Validation:</strong> Read-only; scans one directory for HTML files and writes nothing.</p>
+  </section>
+  <section class="detail-card"><h2>Implemented</h2><ul><li>Non-recursive <code>*.html</code> discovery</li><li>Sorted page-name list</li><li>Page-count summary</li></ul></section>
+  <section class="detail-card"><h2>Limitations</h2><p>The paired script does not serve pages, validate links, deploy the site, render a UI, or provide the root Flask application's deterministic helper and APIs.</p></section>
+</main>
+</body>
+</html>

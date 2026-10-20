@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Z is a local-first personal AI operating system for Windows, with a FastAPI backend, React dashboard, SQLite storage, optional Ollama models, and approval-gated actions.">
+  <title>Z AI Assistant | Justin Wimmer</title>
+  <link rel="stylesheet" href="../style.css?v=z-local">
+</head>
+<body class="site-shell">
+<a class="skip-link" href="#case-study">Skip to case study</a>
+<main class="detail-shell" id="case-study">
+  <nav class="detail-nav" aria-label="Site navigation">
+    <a class="home-link" href="../portfolio_console.html">Primary work</a>
+    <a class="home-link" href="../z-showcase.html">Try controlled showcase</a>
+    <a class="home-link" href="../project-evidence.json">Evidence</a>
+    <a class="home-link" href="../Z_STATUS.md">Status and roadmap</a>
+  </nav>
+
+  <header class="detail-header">
+    <p class="eyebrow">Primary Work // Local AI Operating System</p>
+    <h1>Z: Local AI Assistant</h1>
+    <p class="detail-focus">Z is a local-first personal AI operating system for Windows. It has a FastAPI backend, a React + Vite + Tailwind dashboard, SQLite storage, and optional local LLMs through Ollama. Actions show an exact preview and require explicit approval.</p>
+    <div class="case-meta">
+      <span>FastAPI + Pydantic</span>
+      <span>SQLite audit state</span>
+      <span>Typed desktop skills</span>
+      <span>Provider + research boundaries</span>
+    </div>
+  </header>
+
+  <section class="detail-card">
+    <h2>Problem and users</h2>
+    <p>Z brings chat and personal workflow tools into one Windows workspace while keeping actions under the user's control. Its dashboard includes Chat; Life OS, with a daily planner based on C.O.O.L. and a Projects map; Calendar + Workflow; Reports; Entry Log; System for PC health and maintenance; Settings; and a Notes editor.</p>
+  </section>
+
+  <section class="detail-card">
+    <h2>Implemented by me</h2>
+    <ul>
+      <li>A separate typed FastAPI service that rejects public binding and is intentionally excluded from public Render and Docker services</li>
+      <li>A local-first Windows product with clear separation between conversation, personal workflows, system information, and approval-gated actions</li>
+      <li>A curated website index over fixed first-party evidence paths, with repository-relative citations and instruction-neutralization</li>
+      <li>Broad general-purpose chat for ordinary safe questions through optional Ollama or generic OpenAI-compatible providers, with bounded structured history, timeouts, visible model status, and explicit deterministic fallback</li>
+      <li>A deterministic refusal gate that stops approval-bypass, destructive execution, credential-theft, and malware requests before any model or web call</li>
+      <li>Keyless Wikipedia research plus optional Brave Search, normalized dated citations, provenance labels, and SSRF-hardened fixed-source HTTP</li>
+      <li>Read-only system, disk, directory-metadata, and process summaries that omit environment dumps, file contents, secrets, and command lines</li>
+      <li>Typed proposals for folder creation, one-file move/rename, bounded extension organization, allowlisted app launch, allowlisted HTTPS URL launch, and optional clipboard text</li>
+      <li>Owner/session isolation, high-entropy bearer authentication, expiring payload-bound approvals, atomic single-use execution, collision denial, path revalidation, and append-only audit events</li>
+      <li>A React + Vite + Tailwind dashboard with Chat, Life OS, Calendar + Workflow, Reports, Entry Log, System, Settings, and Notes</li>
+    </ul>
+  </section>
+
+  <section class="detail-card">
+    <h2>Architecture</h2>
+    <ol class="architecture-flow">
+      <li>React + Vite + Tailwind dashboard</li>
+      <li>FastAPI backend<br><small>typed local services</small></li>
+      <li>SQLite storage<br><small>local application data</small></li>
+      <li>Optional Ollama models<br><small>local LLMs</small></li>
+    </ol>
+    <p>The public Flask portfolio implements a separate showcase module over fixed answer and scenario dictionaries. It imports none of the local service, provider, knowledge-index, inspection, proposal-store, or executor modules and never proxies <code>127.0.0.1:8020</code>. Browser state is isolated in a signed session cookie and capped; every public "execution" produces only a synthetic result and session-local audit entry.</p>
+    <p>The full local service still listens only on <code>127.0.0.1:8020</code>. Broad model chat, cited website answers, cited web research, and typed action execution remain separate, so model text cannot become a command or an approval.</p>
+  </section>
+
+  <section class="detail-card">
+    <h2>Safety boundary</h2>
+    <p><strong>Every desktop mutation, application launch, URL launch, or clipboard write follows:</strong> propose → render exact effects and root-relative path diff → approve the canonical payload hash → execute once → record the immutable result. There is no chat shortcut, blanket approval, delete action, recursive operation, overwrite default, raw shell, PowerShell, arbitrary executable, or user-supplied command argument.</p>
+    <p>Paths reject traversal, absolute/UNC/device forms, and links or reparse points that resolve outside configured roots. Execution revalidates paths, filesystem state, URL/app allowlists, ownership, expiry, and stored-payload integrity immediately before claiming the action. Residual local-account and filesystem-race risks are documented in <a href="../Z_STATUS.md">the threat model</a>.</p>
+    <p><strong>Public boundary:</strong> the hosted demo accepts only a bounded question string or one fixed scenario identifier. It has no provider credentials, arbitrary source selection, URL input, repository reader, environment reader, system inspection, clipboard access, process launcher, filesystem adapter, or user-supplied HTML rendering. A strict CSP limits scripts and API connections to the same origin.</p>
+  </section>
+
+  <section class="detail-card">
+    <h2>Knowledge and research</h2>
+    <p>Portfolio answers search a bounded index built only from fixed repository evidence sources and return their paths. Research mode consults keyless Wikipedia and, when separately configured, Brave Search. Outbound research permits HTTPS on the standard port, validates DNS and redirects against private, loopback, metadata, reserved, link-local, and multicast destinations, and limits time, bytes, content types, redirects, excerpts, and result counts.</p>
+    <p>Retrieved text is labeled as untrusted data in the provider prompt. It cannot alter Z's persona, action policy, or approval rule. Ordinary safe questions can use the configured model without matching a portfolio keyword, while curated portfolio citations are reserved for clear portfolio questions or an explicit website-evidence mode. Responses disclose whether they used deterministic composition, website evidence, web retrieval, or a configured model; an unavailable or timed-out provider falls back explicitly and never masquerades as a model answer.</p>
+  </section>
+
+  <section class="detail-card">
+    <h2>Trade-offs</h2>
+    <ul>
+      <li>Native Windows execution is required for desktop skills; omitting Z from containers avoids a misleading or unsafe deployment story.</li>
+      <li>A fixed knowledge manifest and fixed research providers are narrower than arbitrary RAG or browsing, but they make provenance and SSRF controls reviewable.</li>
+      <li>A shared local action token plus per-tab session ownership is intentionally simpler than accounts; it is suitable for one trusted local operator, not a remote multi-user service.</li>
+      <li>Typed actions sacrifice general automation in exchange for inspectable payloads, deterministic validation, and meaningful approval.</li>
+    </ul>
+  </section>
+
+  <section class="detail-card">
+    <h2>Run and verify</h2>
+    <p><strong>Source:</strong> <code>z-assistant</code></p>
+    <p><strong>Legacy source retained:</strong> <code>Software Automation\z-ai-assistant</code></p>
+    <p><strong>Run from repository root:</strong></p>
+    <pre><code>python -m pip install -r requirements.txt
+Set-Location z-assistant
+Copy-Item .env.example .env
+# Optionally set Z_MODEL_PROVIDER=ollama and a locally installed model.
+# Set a generated Z_ACTION_TOKEN and allowlists before using actions.
+.\start.ps1</code></pre>
+    <p>After starting the trusted local edition, its owner can open <code>http://127.0.0.1:8020</code> on that same machine. This is not a public link or hosted console. Desktop execution remains disabled until <code>Z_DESKTOP_ACTIONS_ENABLED=true</code> is deliberately configured.</p>
+    <pre><code>python -m pytest z-assistant\tests -q
+python -m ruff check z-assistant
+python -m mypy --check-untyped-defs z-assistant\z
+python -m compileall -q z-assistant
+node --check z-assistant\ui\console.js</code></pre>
+  </section>
+
+  <section class="detail-card">
+    <h2>Tests</h2>
+    <p>The dedicated suite covers configuration and sanitized status, migrations, API/UI contracts, persona behavior, website citations, provider failures and timeouts, web provenance, prompt-injection handling, SSRF and redirect denial, secret/process redaction, traversal/UNC/link escape, collisions, allowlists, approval ownership, expiry, payload tampering, replay, two-client isolation, disabled execution, and mocked launches. Filesystem mutations are limited to temporary approved roots.</p>
+  </section>
+
+  <section class="detail-card">
+    <h2>Current Limitations</h2>
+    <p>The public showcase uses fixed evidence and synthetic action scenarios; it does not connect to the private local system, a model provider, or real Windows actions. Z itself is designed for local Windows use, and its model integration depends on a locally configured Ollama installation.</p>
+  </section>
+
+  <section class="detail-card">
+    <h2>Next milestones</h2>
+    <p>The next step is a hardening pass. The roadmap then includes a system-tray interface, a browser agent, a security and network sentinel, and multi-agent/mobile sync. Current project status is maintained in <a href="../Z_STATUS.md">Z_STATUS.md</a>.</p>
+  </section>
+
+  <section class="detail-card">
+    <h2>Demo status</h2>
+    <p>The <a href="../z-showcase.html">controlled public showcase</a> provides curated, cited portfolio answers and three synthetic action scenarios. It is not the local service: no model, network research, localhost connection, desktop adapter, or real execution path is present. Desktop capability remains available only in a trusted native user session. The source code is private and is not linked from this portfolio.</p>
+  </section>
+</main>
+<script src="../app.js?v=z-local"></script>
+</body>
+</html>

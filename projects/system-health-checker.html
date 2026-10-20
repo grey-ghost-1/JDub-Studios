@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Disk Health Checker | Justin Wimmer</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="site-shell">
+<main class="detail-shell">
+  <nav class="detail-nav" aria-label="Site navigation"><a class="home-link" href="../it_support.html">← Back to IT Support</a></nav>
+  <header class="detail-header">
+    <p class="eyebrow">IT Support Prototype</p>
+    <h1>System Health Checker</h1>
+    <p class="detail-focus">A read-only disk-space check that compares free bytes for one path against a fixed 10 GB threshold.</p>
+  </header>
+  <section class="detail-card">
+    <h2>Evidence snapshot</h2>
+    <p><strong>Source:</strong> <code>IT Support\system-health-checker</code></p>
+    <p><strong>Run from repository root:</strong> <code>python "IT Support\system-health-checker\main.py" .</code></p>
+    <p><strong>Validation:</strong> Reads local disk-usage values and writes no files or settings.</p>
+  </section>
+  <section class="detail-card"><h2>Implemented</h2><ul><li>Path input with current-directory default</li><li><code>shutil.disk_usage</code> free-space retrieval</li><li>Healthy or attention status based on a fixed threshold</li></ul></section>
+  <section class="detail-card"><h2>Limitations</h2><p>No update, driver, CPU, memory, network configuration, security, SMART-health, or maintenance checks are included.</p></section>
+</main>
+</body>
+</html>

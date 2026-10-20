@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Local Metrics Snapshot | Justin Wimmer</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="site-shell">
+<main class="detail-shell">
+  <nav class="detail-nav" aria-label="Site navigation"><a class="home-link" href="../software_development.html">← Back to Software &amp; Automation</a></nav>
+  <header class="detail-header">
+    <p class="eyebrow">Software Data Prototype</p>
+    <h1>Personal Dashboard Web App</h1>
+    <p class="detail-focus">A one-shot command-line snapshot that prints the operating-system name and disk-use percentage as JSON.</p>
+  </header>
+  <section class="detail-card">
+    <h2>Evidence snapshot</h2>
+    <p><strong>Source:</strong> <code>Software Automation\personal-dashboard-web-app</code></p>
+    <p><strong>Run from repository root:</strong> <code>python "Software Automation\personal-dashboard-web-app\main.py" .</code></p>
+    <p><strong>Validation:</strong> Reads local disk-usage values and writes no files or settings.</p>
+  </section>
+  <section class="detail-card"><h2>Implemented</h2><ul><li>Path input with current-directory default</li><li>Disk-use percentage calculation</li><li>JSON output with host type; CPU and memory fields are explicitly <code>null</code></li></ul></section>
+  <section class="detail-card"><h2>Limitations</h2><p>No Flask or FastAPI server, web UI, REST endpoint, polling, weather data, network metrics, CPU measurement, memory measurement, persistence, or visualization is implemented.</p></section>
+</main>
+</body>
+</html>

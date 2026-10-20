@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cyber Security | Justin Wimmer</title>
+<link rel="stylesheet" href="style.css">
+<script src="local-links.js"></script>
+</head>
+<body class="site-shell">
+<main class="detail-shell">
+  <nav class="detail-nav" aria-label="Site navigation">
+    <a class="home-link" href="portfolio_console.html">Primary work</a>
+    <a class="home-link" href="labs.html">All labs</a>
+    <a class="home-link" href="project-evidence.json">Evidence</a>
+  </nav>
+  <header class="detail-header">
+    <p class="eyebrow">Labs &amp; Prototypes // 5 of 20</p>
+    <h1>Cyber Security Labs</h1>
+    <p class="detail-focus">Five bounded training prototypes demonstrate local TCP checks, failed-login parsing, offline advisory matching, training-hash comparison, and controlled response-reflection checks.</p>
+  </header>
+
+  <section class="detail-card">
+    <h2>Safety and scope</h2>
+    <ul>
+      <li>Network checks are limited to user-supplied hosts and ports</li>
+      <li>Advisory matching uses local JSON files and makes no CVE API requests</li>
+      <li>Password examples use locally generated training data only</li>
+      <li>The OWASP example checks reflection in a controlled response string; it does not attack Juice Shop</li>
+      <li>None of these scripts is a full scanner, SIEM, vulnerability manager, or penetration-testing suite</li>
+    </ul>
+  </section>
+
+  <section class="detail-card">
+    <h2>Labs &amp; Prototypes</h2>
+    <ul>
+      <li><a href="projects/network-scanner.html"><strong>Network Scanner Prototype</strong></a> — Performs bounded TCP connection checks for one host and an explicit port list; it does not scan IP ranges or identify services.</li>
+      <li><a href="projects/siem-log-analyzer.html"><strong>Failed-Login Log Analyzer</strong></a> — Parses matching log lines and reports user/IP pairs at a threshold; it is not a SIEM ingestion or correlation platform.</li>
+      <li><a href="projects/vulnerability-assessment-toolkit.html"><strong>Offline Advisory Matcher</strong></a> — Cross-references two local JSON files by product and version; it does not query NVD or calculate live risk.</li>
+      <li><a href="projects/password-cracking-lab.html"><strong>Training Hash Comparison</strong></a> — Compares hashes created from a small local word list; it does not invoke Hashcat or perform brute-force attacks.</li>
+      <li><a href="projects/owasp-juice-shop-testing.html"><strong>Reflection Check Prototype</strong></a> — Detects whether a marker is reflected in a supplied training response; it does not execute OWASP exploits.</li>
+    </ul>
+  </section>
+
+  <section class="detail-card">
+    <h2>Evidence</h2>
+    <p>See <a href="project-evidence.json">the project evidence inventory</a> for source folders, exact commands, limitations, and validation status.</p>
+  </section>
+</main>
+</body>
+</html>

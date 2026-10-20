@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Failed-Login Log Analyzer | Justin Wimmer</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="site-shell">
+<main class="detail-shell">
+  <nav class="detail-nav" aria-label="Site navigation"><a class="home-link" href="../cybersecurity.html">← Back to Cyber Security</a></nav>
+  <header class="detail-header">
+    <p class="eyebrow">Cyber Security Prototype</p>
+    <h1>SIEM Log Analyzer</h1>
+    <p class="detail-focus">A focused parser that counts failed-password log lines by user and IP address and filters them by a supplied threshold.</p>
+  </header>
+  <section class="detail-card">
+    <h2>Evidence snapshot</h2>
+    <p><strong>Source:</strong> <code>Cybersecurity\siem-log-analyzer</code></p>
+    <p><strong>Run from repository root:</strong> <code>python "Cybersecurity\siem-log-analyzer\main.py" path\to\auth.log --threshold 3</code></p>
+    <p><strong>Validation:</strong> Read-only, but requires a user-supplied log file; no sample log is bundled.</p>
+  </section>
+  <section class="detail-card">
+    <h2>Implemented</h2>
+    <ul>
+      <li>Regex matching for <code>Failed password for USER from IP</code> lines</li>
+      <li>Counts matching user/IP pairs</li>
+      <li>Returns pairs that meet the threshold</li>
+    </ul>
+  </section>
+  <section class="detail-card">
+    <h2>Limitations</h2>
+    <p>This is not a SIEM pipeline. It does not ingest multiple formats, parse timestamps, correlate events, categorize event types, detect broader anomalies, or persist findings.</p>
+  </section>
+</main>
+</body>
+</html>

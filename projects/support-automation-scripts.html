@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Log Collection Planner | Justin Wimmer</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="site-shell">
+<main class="detail-shell">
+  <nav class="detail-nav" aria-label="Site navigation"><a class="home-link" href="../it_support.html">← Back to IT Support</a></nav>
+  <header class="detail-header">
+    <p class="eyebrow">IT Support Dry-Run Prototype</p>
+    <h1>Support Automation Scripts</h1>
+    <p class="detail-focus">A read-only planning utility that lists log files in one directory and reports that no changes were applied.</p>
+  </header>
+  <section class="detail-card">
+    <h2>Evidence snapshot</h2>
+    <p><strong>Source:</strong> <code>IT Support\support-automation-scripts</code></p>
+    <p><strong>Run from repository root:</strong> <code>python "IT Support\support-automation-scripts\main.py" .</code></p>
+    <p><strong>Validation:</strong> Read-only by construction; scans one directory and writes no report or collected files.</p>
+  </section>
+  <section class="detail-card"><h2>Implemented</h2><ul><li>Non-recursive <code>*.log</code> discovery</li><li>Dry-run plan output</li><li>Explicit <code>changes_applied: 0</code> result</li></ul></section>
+  <section class="detail-card"><h2>Limitations</h2><p>No file collection, archive creation, system cleanup, configuration check, recursive search, scheduling, or persisted report is implemented.</p></section>
+</main>
+</body>
+</html>

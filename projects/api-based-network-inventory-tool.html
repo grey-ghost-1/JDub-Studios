@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JSON-to-SQLite Network Inventory | Justin Wimmer</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="site-shell">
+<main class="detail-shell">
+  <nav class="detail-nav" aria-label="Site navigation"><a class="home-link" href="../network_software.html">← Back to Network Software</a></nav>
+  <header class="detail-header">
+    <p class="eyebrow">Network Data Prototype</p>
+    <h1>API-Based Network Inventory Tool</h1>
+    <p class="detail-focus">A local JSON-to-SQLite synchronization prototype for storing simple device inventory records.</p>
+  </header>
+  <section class="detail-card">
+    <h2>Evidence snapshot</h2>
+    <p><strong>Source:</strong> <code>Network\api-based-network-inventory-tool</code></p>
+    <p><strong>Run from repository root:</strong> <code>python "Network\api-based-network-inventory-tool\main.py" path\to\inventory.json</code></p>
+    <p><strong>Validation:</strong> Requires a user-supplied JSON file and creates or updates <code>inventory.db</code> in the working directory.</p>
+  </section>
+  <section class="detail-card"><h2>Implemented</h2><ul><li>Local JSON device loading</li><li>SQLite table creation and upsert behavior</li><li>Structured output of stored inventory rows</li></ul></section>
+  <section class="detail-card"><h2>Limitations</h2><p>No network API retrieval, authentication, discovery, topology mapping, remote database, scheduler, or change notification is implemented.</p></section>
+</main>
+</body>
+</html>
